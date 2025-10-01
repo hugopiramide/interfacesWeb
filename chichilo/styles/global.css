@@ -31,8 +31,16 @@ header h1 {
 }
 
 h2{
+    color: #e67e22;
     font-size: 28px;
     padding-bottom: 20px;
+}
+
+hr{
+    padding: 1px;
+    background-color: #e67e22;
+    border-radius: 25px;
+    margin-bottom: 10px;
 }
 
 nav {
@@ -106,7 +114,6 @@ section {
 }
 
 .blog {
-    max-width: 1000px;
     margin: auto;
     padding: 20px;
 }
@@ -116,10 +123,6 @@ section {
     padding: 20px;
     margin-bottom: 20px;
     border-left: 5px solid #e67e22;
-}
-
-.blog-post h2 {
-    color: #e67e22;
 }
 
 .blog-post small {
@@ -134,12 +137,8 @@ footer {
     margin-top: 40px;
 }
 
-footer .redes {
-    margin-top: 10px;
-}
-
 footer a {
-    color: #f4c542;
+    color: #dba16e;
     margin: 0 10px;
     text-decoration: none;
 }
