@@ -1,24 +1,29 @@
+/* Da color al fondo con la variable */
 :root{
     --bkg-color: #f8f8f8;
 }
 
+/* Le da margin y padding 0 para toda la web */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+/* Da estilo al body */
 body {
     font-family: 'Arial', sans-serif;
     background-color: var(--bkg-color);
     color: #333;
 }
 
+/* Le da posicion relative y el color de la tipografia blanco */
 header {
     position: relative;
     color: white;
 }
 
+/* Da estilo a la imagen del header con tamaño */
 header img {
     width: 100%;
     height: 300px;
@@ -26,6 +31,7 @@ header img {
     filter: brightness(30%); /*Flipas con esta propiedad*/
 }
 
+/* Posciona el titulo de la web dentro del header */
 header h1 {
     position: absolute;
     top: 50%;
@@ -34,12 +40,14 @@ header h1 {
     font-size: 3rem;
 }
 
+/* Da estilo a los h2 */
 h2{
     color: #e67e22;
     font-size: 28px;
     padding-bottom: 20px;
 }
 
+/* Da estilo y color a las barras horizontales para separar */
 hr{
     padding: 1px;
     background-color: #e67e22;
@@ -47,20 +55,24 @@ hr{
     margin-bottom: 10px;
 }
 
+/* Da color a la seccion del menu */
 nav {
     background-color: #222;
 }
 
+/* Usa flex para darselo a la seccion padre del menu de navegacion */
 nav ul {
     display: flex;
     justify-content: center;
     list-style: none;
 }
 
+/* Da margen a los apartados del menu de navegacion */
 nav li {
     margin: 15px;
 }
 
+/* Decora la tipografia de los apartados del menu de navegacion */
 nav a {
     text-decoration: none;
     color: white;
@@ -68,26 +80,32 @@ nav a {
     transition: color 0.3s ease;
 }
 
+/* Al pasar por los apartados del menu de navegacion les cambia el color a la tipografia de los elementos */
 nav a:hover {
     color: #f4c542;
 }
 
+/* Le da un padding a todo el main */
 main {
     padding: 20px;
 }
 
+/* Le aplica margen inferior a todas las secciones */
 section {
     margin-bottom: 40px;
 }
 
+/* Posiciona el contenedor del home */
 #inicio{
     padding-right: 20vw;
 }
 
+/* Da posicion con el padding al texto del home */
 #inicio > p{
     padding: 10px;
 }
 
+/* Usa grid para dar posicionamiento al contenido del menu */
 .grid-menu .grid-container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -95,6 +113,7 @@ section {
     margin-top: 20px;
 }
 
+/* Da estilo a los platos */
 .plato {
     background-color: #fff;
     padding: 20px;
@@ -103,6 +122,7 @@ section {
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
+/* Da estilo y posicion con flex */
 .flex-contacto {
     display: flex;
     flex-wrap: wrap;
@@ -113,15 +133,18 @@ section {
     border-radius: 10px;
 }
 
+/* Da posicion con flex */
 .flex-contacto .info {
     flex: 1 1 300px;
 }
 
+/* Da estilo para el apartado padre del blog */
 .blog {
     margin: auto;
     padding: 20px;
 }
 
+/* Posiciona y decora con colores tanto el borde como el fondo de los apartados del blog */
 .blog-post {
     background-color: white;
     padding: 20px;
@@ -129,10 +152,12 @@ section {
     border-left: 5px solid #e67e22;
 }
 
+/* Da color de tipografia a las fechas de publicacion de los apratados del blog */
 .blog-post small {
     color: #7f8c8d;
 }
 
+/* Pinta el fondo da color a la tipografia y da posicionamiento al footer */
 footer {
     background-color: #222;
     color: white;
@@ -141,6 +166,7 @@ footer {
     margin-top: 40px;
 }
 
+/* Pinta la tipografia de los links del footer */
 footer a {
     color: #dba16e;
     margin: 0 10px;
