@@ -113,6 +113,37 @@ section {
     margin-top: 20px;
 }
 
+.carta-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+}
+
+.menu {
+    background: var(--gris);
+    border-radius: 15px;
+    overflow: hidden;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.menu h3 {
+    margin: 20px 0 10px;
+    font-size: 20pt;
+    color: var(--rojo);
+}
+
+.carta p {
+    padding: 0 20px 20px;
+    font-size: 13pt;
+    color: var(--gris-oscuro);
+}
+
+.carta:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+} 
+
+
 /* Da estilo a los platos */
 .plato {
     background-color: #fff;

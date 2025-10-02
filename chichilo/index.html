@@ -27,7 +27,7 @@
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque consectetur impedit repellendus deserunt maiores vitae non consequuntur eaque, sit eveniet illum magnam expedita velit quas in numquam. Adipisci, sed blanditiis!</p>
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit nobis in dolorem ipsa sit, ratione incidunt natus similique possimus, aliquam molestiae. Molestias veniam dolore eligendi earum numquam maxime hic in.</p>
         </section>
-        <section id="menu" class="grid-menu">
+<!--    <section id="menu" class="grid-menu">
             <h2>Menu</h2>
             <section class="grid-container">
                 <article class="plato">Primer Plato</article>
@@ -36,6 +36,45 @@
                 <article class="plato">Postres</article>
             </section>
         </section>
+    -->        
+       <section id="carta" class="carta-completa grid-menu">
+        <h2>Menu</h2>
+        <div class="desplegable grid-container">
+            <div class="desplegable-item">
+            <button class="desplegable-header">Primeros platos</button>
+            <div class="desplegable-body">
+                <p>Croquetas de jamón</p>
+                <p>Callos</p>
+                <p>Pulpo a la gallega</p>
+            </div>
+            </div>
+            <div class="desplegable-item">
+            <button class="desplegable-header">Carnes</button>
+            <div class="desplegable-body">
+                <p>Chuleta de carne gallega madurada</p>
+                <p>Carne asada en su salsa</p>
+                <p>Pollo a la brasa</p>
+            </div>
+            </div>
+            <div class="desplegable-item">
+            <button class="desplegable-header">Pescados</button>
+            <div class="desplegable-body">
+                <p>Salmón al vapor</p>
+                <p>Anguila a la plancha</p>
+                <p>Sardinitas fritas</p>
+            </div>
+            </div>
+            <div class="desplegable-item">
+            <button class="desplegable-header">Postres</button>
+            <div class="desplegable-body">
+                <p>Tarta de la abuela</p>
+                <p>Arroz con lecha</p>
+                <p>Coulant de chocolate</p>
+            </div>
+            </div>
+            </div>
+        </section>
+
         <section class="flex-contacto">
             <section class="info">
                 <h2>Ubicación</h2>
@@ -55,5 +94,16 @@
             <a href="#">Facebook</a>
         </div>
     </footer>
+    <script>
+        // ------ Script básico para los desplegables de la carta ---------
+
+        document.querySelectorAll('.desplegable-header').forEach(btn => {
+            btn.addEventListener('click', () => {
+            btn.classList.toggle('active');
+            const body = btn.nextElementSibling;
+            body.style.display = body.style.display === 'block' ? 'none' : 'block';
+            });
+        });
+    </script>
 </body>
 </html>
