@@ -113,36 +113,46 @@ section {
     margin-top: 20px;
 }
 
-.carta-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 30px;
+/* Necesario para el estilo de JavaScript */
+.desplegable {
+    margin: 0 auto;
+    text-align: center;
 }
 
-.menu {
-    background: var(--gris);
-    border-radius: 15px;
-    overflow: hidden;
-    transition: transform 0.3s, box-shadow 0.3s;
+/* Necesario para el estilo de JavaScript */
+.desplegable-item {
+    margin-bottom: 15px;
 }
 
-.menu h3 {
-    margin: 20px 0 10px;
-    font-size: 20pt;
-    color: var(--rojo);
-}
-
-.carta p {
-    padding: 0 20px 20px;
+/* Necesario para el estilo de JavaScript */
+.desplegable-header {
+    border: 1px solid black;
+    border-radius: 10px; /* 🔴 Por defecto, caja completa */
+    padding: 15px 20px;
+    width: 100%;
     font-size: 13pt;
-    color: var(--gris-oscuro);
+    font-weight: bold;
+    cursor: pointer;
+    background-color: #eee;
+    outline: none;
+    text-align: center;
 }
 
-.carta:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 10px 20px rgba(0,0,0,0.15);
-} 
+/* Cuando está activo (se abre el body), el header solo redondea arriba */
+.desplegable-header.active {
+    border-radius: 10px 10px 0 0;
+}
 
+/* El body cerrado */
+.desplegable-body {
+    display: none;
+    padding: 15px 20px;
+    color: var(--gris-oscuro);
+    background: var(--blanco);
+    border: 1px solid black;
+    border-top: none;   /* 🔴 se fusiona con el header */
+    border-radius: 0 0 10px 10px;
+}
 
 /* Da estilo a los platos */
 .plato {

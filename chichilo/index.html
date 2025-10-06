@@ -3,19 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./styles/global.css" type="text/css">
+    <link rel="stylesheet" href="./style/global.css" type="text/css">
     <title>Cantina Chichilo</title>
 </head>
 <body>
     <header>
-        <img src="./assets/img/chichilo.png" alt="Cantina Chichilo">
+        <img src="./assets/chichilo.png" alt="Cantina Chichilo">
         <h1>Cantina Chichilo</h1>
     </header>
     <nav>
         <ul>
             <li><a href="#inicio">Home</a></li>
             <li><a href="#menu">Menú</a></li>
-            <li><a href="./sections/blog.html">Blog</a></li>
+            <li><a href="./html/blog.html">Blog</a></li>
             <li><a href="#contacto">Contacto</a></li>
         </ul>
     </nav>
@@ -26,18 +26,8 @@
             <p><i>Un lugar con alma de barrio, donde la comida y la historia se encuentran </i>- Hugo del Castillo</p>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque consectetur impedit repellendus deserunt maiores vitae non consequuntur eaque, sit eveniet illum magnam expedita velit quas in numquam. Adipisci, sed blanditiis!</p>
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit nobis in dolorem ipsa sit, ratione incidunt natus similique possimus, aliquam molestiae. Molestias veniam dolore eligendi earum numquam maxime hic in.</p>
-        </section>
-<!--    <section id="menu" class="grid-menu">
-            <h2>Menu</h2>
-            <section class="grid-container">
-                <article class="plato">Primer Plato</article>
-                <article class="plato">Carnes</article>
-                <article class="plato">Pescados</article>
-                <article class="plato">Postres</article>
-            </section>
-        </section>
-    -->        
-       <section id="carta" class="carta-completa grid-menu">
+        </section>       
+       <section id="menu" class="carta-completa grid-menu">
         <h2>Menu</h2>
         <div class="desplegable grid-container">
             <div class="desplegable-item">
@@ -75,7 +65,7 @@
             </div>
         </section>
 
-        <section class="flex-contacto">
+        <section id="contacto" class="flex-contacto">
             <section class="info">
                 <h2>Ubicación</h2>
                 <p>Av. Directorio 1234, Buenos Aires, Argentina</p>
@@ -95,13 +85,21 @@
         </div>
     </footer>
     <script>
-        // ------ Script básico para los desplegables de la carta ---------
-
         document.querySelectorAll('.desplegable-header').forEach(btn => {
             btn.addEventListener('click', () => {
-            btn.classList.toggle('active');
-            const body = btn.nextElementSibling;
-            body.style.display = body.style.display === 'block' ? 'none' : 'block';
+                // Cerrar todos los desplegables
+                document.querySelectorAll('.desplegable-header').forEach(otherBtn => {
+                    if (otherBtn !== btn) {
+                        otherBtn.classList.remove('active');
+                        const otherBody = otherBtn.nextElementSibling;
+                        otherBody.style.display = 'none';
+                    }
+                });
+
+                // Alternar el desplegable clicado
+                btn.classList.toggle('active');
+                const body = btn.nextElementSibling;
+                body.style.display = (body.style.display === 'block') ? 'none' : 'block';
             });
         });
     </script>
